@@ -14,6 +14,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {ArticleService} from './article.service'
 import { FormsModule } from '@angular/forms'; 
 import { HttpModule } from '@angular/http'
+import {MatListModule} from '@angular/material/list';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,9 @@ import { HttpModule } from '@angular/http'
     MatInputModule,
     MatGridListModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    MatListModule,
+    MatSnackBarModule
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent]

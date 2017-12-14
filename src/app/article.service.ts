@@ -8,11 +8,11 @@ export class ArticleService {
   private urls = Urls
   constructor(private http: Http) { }
   getAllArticles() {
-
+    return this.http.get(this.urls.GetAllArticles)
+    .toPromise().then(response=>response.json() as Result)
   }
   publishArticle(article) {
     article.author = "炳良"
-
     return this.http.post(this.urls.PublishArticle, article)
       .toPromise().then(response => response.json() as Result)
   }

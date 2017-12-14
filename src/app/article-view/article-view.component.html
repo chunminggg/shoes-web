@@ -1,3 +1,9 @@
-<p>
-  article-view works!
-</p>
+
+<mat-list>
+  <h3 mat-subheader>文章列表</h3>
+  <mat-list-item *ngFor="let article of articles">
+    <h4 mat-line>{{article.title}}</h4>
+    <p mat-line> {{article.author}} </p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  
