@@ -1,0 +1,11 @@
+<mat-grid-list cols="4" rowHeight="2:1">
+  <mat-grid-tile>
+ <mat-form-field  class="richEditor">
+    <input matInput placeholder="请输入标题" >
+  </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-raised-button color="primary" (click)="onButtonSubmitClick()">发布</button>
+  </mat-grid-tile>
+</mat-grid-list>
+<div [froalaEditor]  [(froalaModel)]="richModel" class="richEditor"></div>
