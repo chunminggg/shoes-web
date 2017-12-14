@@ -10,8 +10,10 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
-
-
+import {HttpClientModule} from '@angular/common/http';
+import {ArticleService} from './article.service'
+import { FormsModule } from '@angular/forms'; 
+import { HttpModule } from '@angular/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +21,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ArticleViewComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
@@ -29,9 +32,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(),
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
